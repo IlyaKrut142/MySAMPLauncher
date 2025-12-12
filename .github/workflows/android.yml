@@ -17,7 +17,11 @@ jobs:
       with:
         java-version: '11'
         distribution: 'temurin'
-        cache: gradle
+        # Убрали строку cache: gradle, чтобы не было ошибки
+
+    - name: List files (Debug)
+      run: ls -R
+      # Эта команда покажет нам, где лежат файлы, если сборка снова упадет
 
     - name: Grant execute permission for gradlew
       run: chmod +x gradlew
@@ -30,3 +34,4 @@ jobs:
       with:
         name: my-samp-launcher
         path: app/build/outputs/apk/debug/app-debug.apk
+        
