@@ -17,21 +17,32 @@ jobs:
       with:
         java-version: '11'
         distribution: 'temurin'
-        # Убрали строку cache: gradle, чтобы не было ошибки
 
-    - name: List files (Debug)
-      run: ls -R
-      # Эта команда покажет нам, где лежат файлы, если сборка снова упадет
-
-    - name: Grant execute permission for gradlew
-      run: chmod +x gradlew
-
-    - name: Build with Gradle
-      run: ./gradlew assembleDebug
-
+    - name: Build with Global Gradle
+      run: |
+        # Эта команда найдет, в какой папке лежит проект, и запустит сборку там
+        # Даже если файлы спрятаны глубоко в папках
+        
+        echo "🔍 Ищем файл build.gradle..."
+        BUILD_FILE=$(find . -name build.gradle | head -n 1)
+        
+        if [ -z "$BUILD_FILE" ]; then
+          echo "❌ Ошибка: Файл build.gradle не найден! Вы точно загрузили файлы?"
+          ls -R
+          exit 1
+        fi
+        
+        PROJECT_DIR=$(dirname "$BUILD_FILE")
+        echo "✅ Проект найден в папке: $PROJECT_DIR"
+        
+        cd "$PROJECT_DIR"
+        
+        echo "🚀 Запускаем сборку через встроенный Gradle..."
+        gradle assembleDebug --no-daemon
+    
     - name: Upload APK
+      if: success()
       uses: actions/upload-artifact@v4
       with:
         name: my-samp-launcher
-        path: app/build/outputs/apk/debug/app-debug.apk
-        
+        path: '**/*.apk'
