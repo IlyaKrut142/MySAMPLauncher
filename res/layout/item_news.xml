@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:gravity="bottom" android:orientation="vertical" android:id="@id/itemNews" android:background="@drawable/ic_item_news_background" android:layout_width="fill_parent" android:layout_height="120.0dip"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout android:layout_width="wrap_content" android:layout_height="wrap_content">
+        <ImageView android:layout_gravity="center" android:layout_width="16.0dip" android:layout_height="16.0dip" android:layout_marginLeft="18.0dip" android:src="@drawable/ic_calendar_white_15dp" />
+        <TextView android:textColor="#ffffffff" android:id="@id/dateNews" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="5.0dip" android:text="10.07.2019" android:fontFamily="@font/robotomedium" />
+    </LinearLayout>
+    <TextView android:textSize="22.0sp" android:textColor="#ffffffff" android:id="@id/nameNews" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="18.0dip" android:layout_marginTop="-5.0dip" android:layout_marginBottom="10.0dip" android:text="Заголовок" android:fontFamily="@font/robotoblack" />
+</LinearLayout>

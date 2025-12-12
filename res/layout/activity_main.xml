@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout android:orientation="vertical" android:id="@id/container" android:background="@drawable/ic_activity_main_background" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <TextView android:textColor="#ffafafaf" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/version" android:foregroundGravity="right" android:fontFamily="@font/robotoregular" app:layout_constraintStart_toStartOf="parent" app:layout_constraintTop_toTopOf="parent" />
+    <include android:layout_width="0.0dip" android:layout_height="0.0dip" app:layout_constraintBottom_toTopOf="@id/nav_view" app:layout_constraintEnd_toEndOf="parent" app:layout_constraintStart_toStartOf="parent" app:layout_constraintTop_toBottomOf="parent" app:layout_constraintTop_toTopOf="parent" layout="@layout/content_main" />
+    <com.google.android.material.bottomnavigation.BottomNavigationView android:id="@id/nav_view" android:layout_width="fill_parent" android:layout_height="wrap_content" app:itemIconTint="@drawable/bottom_navigation_colors" app:labelVisibilityMode="unlabeled" app:layout_constraintBottom_toBottomOf="parent" app:layout_constraintEnd_toEndOf="parent" app:layout_constraintStart_toStartOf="parent" app:menu="@menu/bottom_nav_menu" />
+</androidx.constraintlayout.widget.ConstraintLayout>

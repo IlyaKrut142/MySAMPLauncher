@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:orientation="vertical" android:background="#ff0e1120" android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout android:id="@id/topTexts" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="15.0dip">
+        <ImageView android:id="@id/serverOnlineDialog" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="8.0dip" android:layout_marginRight="8.0dip" android:src="@drawable/ic_circle_black_24dp" android:contentDescription="Онлайн" />
+        <TextView android:textSize="18.0sp" android:textColor="#ffffffff" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="SanTrope Role Play" android:fontFamily="@font/robotobold" />
+        <TextView android:textSize="12.0sp" android:textColor="#ffd6d6d6" android:layout_gravity="center_vertical" android:id="@id/serverPingDialog" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="5.0dip" android:layout_marginRight="8.0dip" android:text="Ping 34" android:fontFamily="@font/robotoregular" />
+    </LinearLayout>
+    <TextView android:textSize="14.0sp" android:textColor="#ffffffff" android:id="@id/serverInfoDialog" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="40.0dip" android:layout_marginTop="4.0dip" android:layout_marginBottom="10.0dip" android:text="Info" android:layout_below="@id/topTexts" android:fontFamily="@font/robotoregular" />
+    <LinearLayout android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginBottom="15.0dip" android:layout_below="@id/serverInfoDialog" android:layout_centerHorizontal="true">
+        <Button android:textColor="#ffffffff" android:id="@id/cancelButton" android:background="@drawable/button_cancel" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginRight="10.0dip" android:text="Отмена" android:fontFamily="@font/robotoregular" />
+        <Button android:textColor="#ffffffff" android:id="@id/connectButton" android:background="@drawable/button_connect" android:paddingLeft="10.0dip" android:paddingRight="10.0dip" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Подключиться" android:fontFamily="@font/robotoregular" />
+    </LinearLayout>
+</RelativeLayout>

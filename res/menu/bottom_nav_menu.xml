@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:icon="@drawable/ic_news_white_24dp" android:id="@id/navigation_news" android:title="@string/title_news" />
+    <item android:icon="@drawable/ic_server_list_white_24dp" android:id="@id/navigation_server_list" android:title="@string/title_server_list" />
+    <item android:icon="@drawable/ic_settings_white_24dp" android:id="@id/navigation_settings" android:title="@string/title_settings" />
+</menu>
